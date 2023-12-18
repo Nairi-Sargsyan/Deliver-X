@@ -1,0 +1,71 @@
+@import '../variables/variables';
+
+.delivery__system_body{
+    padding-bottom: 140px;
+    margin-bottom: 140px;
+
+    .card__item{
+        position: relative;
+        z-index: 1;
+
+        .card__img{
+            position: relative;
+            z-index: 3;
+        }
+
+        .animation__figure_01{
+            display: block;
+            width: 10%;
+            position: absolute;
+            top: 200px;
+            right: 50px;
+            z-index: 2;
+            transform: rotateZ(57deg);
+            transition: all .7s ease;
+        }
+
+        .animation__figure_02{
+            display: block;
+            width: 10%;
+            position: absolute;
+            top: 60px;
+            right: 320px;
+            z-index: 2;
+            transform: rotateZ(28deg);
+            transition: all .7s ease;
+        }
+
+        .animation__figure_03{
+            display: block;
+            width: 10%;
+            position: absolute;
+            top: 210px;
+            right: 250px;
+            z-index: 2;
+            transform: rotateZ(32deg);
+            transition: all .7s ease;
+        }
+
+        &:hover{
+            .animation__figure_01{
+                top: 50px;
+                right: 300px;
+                transform: rotateZ(357deg);
+            }
+
+            .animation__figure_02{
+                top: 25px;
+                right: 15px;
+                transform: rotateZ(357deg);
+            }
+
+            .animation__figure_03{
+                top: 0px;
+                right: 200px;
+                transform: rotateZ(357deg);
+            }
+        }
+
+    }
+
+}

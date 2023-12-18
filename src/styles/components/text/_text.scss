@@ -1,0 +1,178 @@
+@import '../variables/variables';
+
+// Heading Text \\
+
+.heading{
+    color: #121212;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 71.982px;
+    margin-bottom: 16px;
+}
+
+// Subtitle Text \\
+
+.subtitle{
+    color: #FF5634;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19.998px;
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+}
+
+// Title text \\
+
+.title{
+    color: #121212;
+    text-align: center;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 53.988px;
+}
+
+// Text of Title \\
+
+.text{
+    color: #656565;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 30.006px;
+    margin: 0;
+    padding: 0;
+}
+
+.quote{
+    text-align: end;
+    margin: 0 50px 0 0;
+    padding: 0;
+    color: #656565;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30.006px;
+}
+
+/////// Text in Block \\\\\\\
+
+// Block Statistics text \\
+
+.statistics__title{
+    color: #121212;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 66.024px;
+}
+
+.statistics__adducation{
+    color: #FF5634;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 66.024px;
+}
+
+.statistics__subtitle{
+    color: #656565;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19.998px;
+}
+
+// Block Restaurant text \\
+
+.restaurant__title{
+    color: #656565;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+// Card Medium text \\
+
+.card_md_title{
+    color: #121212;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 40.012px;
+}
+
+.card_md_text{
+    color: #656565;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30.006px;
+}
+
+// Card Small text \\
+
+.card_sm_title{
+    color: #121212;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28.006px;
+}
+
+.card_sm_text{
+    color: #656565;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30.006px;
+}
+
+// Why Out text \\
+
+.subtitle-text{
+    color: #656565;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30.006px;
+}
+
+.mark-quation{
+    color: #FF5634;
+    font-size: 44px;
+    font-weight: 400;
+}
+
+// Modal text \\
+
+.modal__title{
+    color: #3F3F3F;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 71.982px;
+}
+
+.modal__text{
+    color: #FF5634;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+
+    &:hover{
+        color: #FF5634;
+        text-decoration: none;
+    }
+}
+
+.privacy__text{
+    color: #656565;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.privacy__link{
+    color: #FF5634;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    transition: all .3s ease;
+
+    &:hover{
+        text-decoration: none;
+        color: #FF5634;
+    }
+}

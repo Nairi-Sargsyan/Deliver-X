@@ -1,0 +1,223 @@
+
+// Open Google Icon \\
+
+.social__google{
+
+    .google__icon{
+        transform-origin: center center;
+        transition: all .5s ease;
+    }
+
+    &:hover{
+        .google__icon{
+            animation: icon-run .7s forwards;
+        }
+    }
+
+    .gg__md_cloud{
+        animation: gg-md-cloud-run 10s linear infinite;
+    }
+
+    .gg__sm_cloud{
+        animation: gg-sm-cloud-run 12s linear infinite;
+    }
+
+    .gg__wind_top{
+        animation: gg-wind-top-run 15s linear infinite;
+    }
+
+    .gg__wind_bottom{
+        animation: gg-wind-bottom-run 13s linear infinite;
+    }
+}
+
+@keyframes gg-md-cloud-run {
+    0%{transform: translateX(45px);}
+    100%{transform: translateX(-95px);}
+}
+
+@keyframes gg-sm-cloud-run {
+    0%{transform: translateX(-45px);}
+    100%{transform: translateX(83px);}
+}
+
+@keyframes gg-wind-top-run {
+    0%{transform: translateX(15px);}
+    100%{transform: translateX(-45px);}
+}
+
+@keyframes gg-wind-bottom-run {
+    0%{transform: translateX(-18px);}
+    100%{transform: translateX(60px);}
+}
+
+// Close Google Icon \\
+
+// Open FaceBook Icon \\
+
+.social__facebook{
+
+    .facebook__icon{
+        transform-origin: center center;
+        transition: all .5s ease;
+    }
+
+    .fb__md_cloud{
+        animation: fb-md-cloud-run 7s linear infinite;
+    }
+
+    .fb__sm_cloud{
+        animation: fb-sm-cloud-run 11s linear infinite;
+    }
+
+    .fb__wind_top{
+        animation: fb-wind-top-run 16s linear infinite;
+    }
+
+    .fb__wind_bottom{
+        animation: fb-wind-bottom-run 13s linear infinite;
+    }
+
+    &:hover{
+        .facebook__icon{
+            animation: icon-run .7s forwards;
+        }
+    }
+}
+
+@keyframes fb-md-cloud-run {
+    0%{transform: translateX(-95px) translateY(-10px)}
+    100%{transform: translateX(45px) translateY(-10px)}
+}
+
+@keyframes fb-sm-cloud-run {
+    0%{transform: translateX(85px) translateY(10px)}
+    100%{transform: translateX(-45px) translateY(10px)}
+}
+
+@keyframes fb-wind-top-run {
+    0%{transform: translateX(-60px) translateY(5px)}
+    100%{transform: translateX(16px) translateY(5px)}
+}
+
+@keyframes fb-wind-bottom-run {
+    0%{transform: translateX(90px) translateY(15px)}
+    100%{transform: translateX(-7px) translateY(15px)}
+}
+
+
+// Close FaceBook Icon \\
+
+// Open GitHub Icon \\
+
+.social__github{
+
+    .github__icon{
+        transform-origin: center center;
+        transition: all .5s ease;        
+    }
+
+    .gh__md_cloud{
+        animation: gh-md-cloud-run 7s linear infinite;
+    }
+
+    .gh__sm_cloud{
+        animation: gh-sm-cloud-run 12s linear infinite;
+    }
+
+    .gh__wind_top{
+        animation: gh-wind-top-run 17s linear infinite;
+    }
+
+    .gh__wind_bottom{
+        animation: gh-wind-bottom-run 15s linear infinite;
+    }
+
+    &:hover{
+        .github__icon{
+            animation: icon-run .7s forwards;
+        }
+    }
+}
+
+@keyframes gh-md-cloud-run {
+    0%{transform: translateX(-95px) translateY(20px)}
+    100%{transform: translateX(45px) translateY(20px)}
+}
+
+@keyframes gh-sm-cloud-run {
+    0%{transform: translateX(85px) translateY(-40px)}
+    100%{transform: translateX(-45px) translateY(-40px)}
+}
+
+@keyframes gh-wind-top-run {
+    0%{transform: translateX(25px) translateY(15px)}
+    100%{transform: translateX(-60px) translateY(15px)}
+}
+
+@keyframes gh-wind-bottom-run {
+    0%{transform: translateX(-15px) translateY(7px)}
+    100%{transform: translateX(85px) translateY(7px)}
+}
+
+// Close GitHub Icon \\
+
+// Open Twitter Icon \\
+
+.social__twitter{
+
+    .twitter__icon{
+        transform-origin: center center;
+        transition: all .5s ease; 
+    }
+
+    .tw__md_cloud{
+        animation: tw-md-cloud-run 9s linear infinite;
+    }
+
+    .tw__sm_cloud{
+        animation: tw-sm-cloud-run 6s linear infinite;
+    }
+
+    .tw__wind_top{
+        animation: tw-wind-top-run 16s linear infinite;
+    }
+
+    .tw__wind_bottom{
+        animation: tw-wind-bottom-run 8s linear infinite;
+    }
+
+    &:hover{
+        .twitter__icon{
+            animation: icon-run .7s forwards;
+        }
+    }
+}
+
+@keyframes tw-md-cloud-run {
+    0%{transform: translateX(40px)}
+    100%{transform: translateX(-90px)}
+}
+
+@keyframes tw-sm-cloud-run {
+    0%{transform: translateX(-45px)}
+    100%{transform: translateX(85px)}
+}
+
+@keyframes tw-wind-top-run {
+    0%{transform: translateX(15px)}
+    100%{transform: translateX(-45px)}
+}
+
+@keyframes tw-wind-bottom-run {
+    0%{transform: translateX(0px) translateY(30px)}
+    100%{transform: translateX(65px) translateY(30px)}
+}
+
+// Close Twitter Icon \\
+
+@keyframes icon-run {
+    0%{transform: rotateZ(0deg);}
+    75%{transform: rotateZ(380deg);}
+    100%{transform: rotateZ(360deg);}
+}

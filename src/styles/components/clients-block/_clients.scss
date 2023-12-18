@@ -1,0 +1,306 @@
+
+
+.clients__block{
+    background-color: #FAFAFA;
+    padding-bottom: 140px;
+
+    .pagination__list{
+        li.active-item{
+            width: 35px !important;
+        }
+    }
+
+    .clients__card-wrapper{
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        padding: 20px 0px;
+        position: relative;
+    }
+    
+    .textarea_title{
+        color: #121212;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 34.008px;
+    }
+
+    .title__feature{
+        display: block;
+        width: 167px;
+        height: 34px;
+        flex-shrink: 0;
+        padding: 0 15px;
+        border-radius: 10px;
+        background-color: #FF5634;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 34.008px;
+    }
+
+    .client__full-name{
+        min-height: 50px;
+        padding: 0 15px;
+        border-radius: 20px 20px 0px 0px;
+        border: 1px solid #CACACA;
+        background: #FFF;
+        transition: border .3s ease;
+
+        &:focus{
+            border: 1px solid #FF5634;
+            outline: none;
+        }
+    }
+
+    .client__address{
+        min-height: 50px;
+        padding: 0 15px;
+        border-radius: 0px 0px 20px 20px;
+        border: 1px solid #CACACA;
+        background: #FFF;
+        transition: border .3s ease;
+
+        &:focus{
+            border: 1px solid #FF5634;
+            outline: none;
+        }
+    }
+
+    .textarea__body{
+        position: relative;
+
+        .client__textarea{
+            min-height: 100px;
+            flex-shrink: 0;
+            padding: 15px 120px 15px 15px;
+            border-radius: 20px;
+            border: 1px solid #CACACA;
+            background-color: #FFF;
+            transition: border .3s ease;
+
+            &:focus{
+                border: 1px solid #FF5634;
+                outline: none;
+            }
+        }
+
+        .textarea__btn{
+            display: block;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            width: 100px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 0px 16px 16px 16px;
+            background: #FF5634;
+            color: #FFF;
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 12px;
+            transition: all .3s ease;
+
+            &:hover{
+                transform: translateY(-3px);
+                background-color: #ff5634b6;
+            }
+        }
+
+        .counter__length{
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+    }
+
+    .warning__text{
+        color: rgb(255, 0, 0);
+    }
+
+    .slider__btn_group{
+        display: block;
+        width: 100%;
+        height: 50px;
+
+        .slider__btn_left{
+            cursor: pointer;
+            width: 50px;
+            height: 100%;
+            position: relative;
+
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: #EDEDED;
+                opacity: .5;
+                border-radius: 50%;
+                transition: all .3s ease;
+            }
+
+            &::after{
+                content: '';
+                background: url(/icons/carousel__arrow_left.png) no-repeat center;
+                display: block;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                background-size: 100%;
+                top: 12.5px;
+                left: 12.5px;
+            }
+
+            &:hover{
+                &:before{
+                    box-shadow: 1px 1px 20px rgba(0,0,0,0.5);
+                }
+            }
+        }
+
+        .slider__btn_right{
+            cursor: pointer;
+            width: 50px;
+            height: 100%;
+            position: relative;
+            left: 15px;
+
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: #EDEDED;
+                opacity: .5;
+                border-radius: 50%;
+                transition: all .3s ease;
+            }
+
+            &::after{
+                content: '';
+                background: url(/icons/carousel__arrow_right.png) no-repeat center;
+                display: block;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                background-size: 100%;
+                top: 12.5px;
+                right: 10px;
+            }
+
+            &:hover{
+                &:before{
+                    box-shadow: 1px 1px 20px rgba(0,0,0,0.5);
+                }
+            }
+        }
+    }
+
+    .clients__card-inner{
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: all .5s ease;
+    }
+
+    .clients__card{
+        position: relative;
+        min-height: 268px;
+        padding: 41px 40px;
+        background-color: #fff;
+        border-radius: 24px;
+        border: 1px solid #EDEDED;
+        box-shadow: 0px 2px 12px 0px rgba(16, 16, 16, 0.08);
+
+
+        .btn__delete_card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            top: 15px;
+            right: 15px;
+            background-color: #EDEDED;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+            text-decoration: none;
+            color: #fff;
+
+            path{
+                color: #121212;
+                transition: all .3s ease;
+            }
+
+            &:hover{
+                 path{
+                    color: #af0c0c;
+                }
+            }
+        }
+
+        .name{
+            color: #121212;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 19.998px;
+        }
+
+        .addres{
+            color: #FF5634;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            margin: 0;
+        }
+
+        .card__mark{
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            background: #EEF8FF;
+            position: relative;
+
+            .mark_heart{
+                position: absolute;
+                width: 26px;
+                height: 26px;
+                top: 5px;
+                left: 35px;
+                display: block;
+                opacity: 0;
+                z-index: 1;
+                background: url(/icons/heart-icon.png) no-repeat center;
+                background-size: 100% 100%;
+                transition: all .3s ease;
+            }
+
+            #client__mark{
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                opacity: 0;
+                z-index: 2;
+            }
+
+            #client__mark:checked ~ .mark_heart{
+                left: 5px;
+                opacity: 1;
+            }
+        }
+    }
+
+    .bg{
+        min-width: 396px;
+        min-height: 268px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+}

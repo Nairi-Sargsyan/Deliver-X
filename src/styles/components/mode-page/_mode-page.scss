@@ -1,0 +1,121 @@
+body.anim__mode{
+    background-color: #121212;
+
+    header{
+        &::after{
+            box-shadow: 0 4px 4px -2px rgba(255, 255, 255, 0.2);
+            background-color: #121212 !important;
+        }
+
+        .navbar__toggler{
+            background-color: #121212 !important;
+        }
+
+        .navbar__menu{
+            background-color: #121212 !important;
+        }
+
+        .nav-link{
+            color: #fff !important;
+        }
+
+        .nav-link.anim_border{
+            &::after{
+                background-color: #121212 !important;
+            }
+        }
+    }
+
+    h1,h2,h3,h4,h5{
+        color: #fff !important;
+    }
+
+    .emblem__part_top{
+        fill: #fff;
+    }
+
+    .emblem__part_bottom{
+        fill: #121212;
+    }
+
+    .emblem__text{
+        fill: #fff;
+    }
+
+    .arrow-left{
+        background-color: #121212 !important;
+    }
+
+    .feature__body{
+            .card__item{
+            &:hover{
+                box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5) !important;
+            }
+        }
+    }
+
+    .clients__block{
+        background-color: #3F3F3F;
+
+        textarea, input{
+            background-color: #484848 !important;
+            border: 1px solid #121212 !important;
+        }
+
+        .clients__card{
+            background-color: #484848 !important;
+            border: 1px solid #121212 !important;
+
+            .card__mark{
+                background-color: #3F3F3F;
+            }
+        }
+
+        p{
+            color: #fff;
+        }
+
+        .slider__btn_left:hover{
+            &:before{
+                box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.5) !important;
+            }
+        }
+
+        .slider__btn_right:hover{
+            &:before{
+                box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.5) !important;
+            }
+        }
+    }
+
+
+    .modal__content{
+        background-color: #fff;
+        opacity: 0.7;
+    }
+
+    .sing-in__modal-body, .sing-up__modal-body{
+        background-color: #121212 !important;
+
+        p{
+            background-color: #121212 !important;
+        }
+
+        input{
+            background-color: #3F3F3F;
+            color: #fafafa;
+
+            &:focus{
+                background-color: #3F3F3F;
+            }
+        }
+    }
+
+    .btn__exit{
+        background-color: #121212 !important;
+        path{
+            fill: #fff !important;
+        }
+    }
+    
+}

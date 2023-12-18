@@ -1,0 +1,23 @@
+@import '../variables/variables';
+
+.restaurant__body{
+    margin-bottom: 140px;
+    padding-bottom: 140px;
+
+    .restaurant__link{
+        .rest__icon path{
+            transition: all .3s ease;
+        }
+
+        &:hover{
+            .rest__icon path:not(:last-child){
+                stroke: $btn-register;
+            }
+
+            .rest__icon path:last-child{
+                fill: $btn-register;
+            }
+        }
+    }
+}
+

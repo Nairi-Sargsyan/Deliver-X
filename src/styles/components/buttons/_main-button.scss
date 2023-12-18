@@ -1,0 +1,97 @@
+@import '../variables/variables';
+
+// Button Download App for Navbar \\
+
+.navbar__btn_download{
+    width: 162px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid $btn-downl;
+    background: #FFF;
+    box-shadow: 0px 2px 6px 0px rgba(16, 16, 16, 0.04);
+    color: $btn-text-color;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    transition: all .5s ease;
+
+    &:hover{
+        transform: translateY(-5px);
+        border: 1px solid $btn-downl-hover;
+        background: $btn-downl-hover;
+    }
+}
+
+// Open Button Register App for Navbar \\
+
+.navbar__btn_register{
+    width: 114px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid $btn-register;
+    background: $btn-register;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    transition: all .5s ease;
+
+    &:hover{
+         transform: translateY(-5px);
+        border: 1px solid $btn-register;
+        background: $btn-register-hover;
+    }
+}
+
+// Button Register App \\
+
+.btn_register{
+    width: 247px;
+    height: 73px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid $btn-register;
+    background: $btn-register;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19.998px;
+    transition: all .5s ease;
+
+    &:hover{
+         transform: translateY(-5px);
+        border: 1px solid $btn-register;
+        background: $btn-register-hover;
+    }
+}
+
+// Button Download App \\
+
+.btn_download{
+    width: 205px;
+    height: 73px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid $btn-downl;
+    background: #FFF;
+    box-shadow: 0px 2px 6px 0px rgba(16, 16, 16, 0.04);
+    color: #121212;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19.998px;
+    transition: all .5s ease;
+
+    &:hover{
+        transform: translateY(-5px);
+        border: 1px solid $btn-downl-hover;
+        background: $btn-downl-hover;
+    }
+}

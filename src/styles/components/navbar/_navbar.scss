@@ -1,0 +1,284 @@
+@import '../variables/variables';
+
+.navbar-brand, .mode, .navbar__toggler{
+    z-index: 3;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    z-index: 3;
+
+    .btn_group{
+        z-index: 3;
+    }
+
+    .navbar_item{
+        margin-right: 20px;
+
+        .nav-link{
+            display: inline-block;
+            color: $btn-text-color;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+
+            &.active{
+                color: $btn-register;
+            }
+        }
+
+        .nav-link.anim_border{
+            position: relative;
+            padding: 2px 5px;
+            border-bottom: 2px solid $btn-register;
+
+            span{
+                position: relative;
+                z-index: 3;
+            }
+            
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                height: calc(100% + 4px);
+                width: 100%;
+                background-color: #fff;
+                transition: all .3s ease-in-out;
+                transform: scaleX(1);
+            }
+
+            &:hover::after{
+                transform: scaleX(0);
+            }
+        }
+    }
+}
+
+// Close Navbar Block \\
+
+// Open Navbar Toggler Button \\
+
+.navbar__toggler{   
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    width: 45px;
+    height: 36px;
+    padding: 2px 5px;
+    background-color: #fff;
+
+    .navbar__toggler_icon{
+        width: 30px;
+        height: 4px;
+        border-radius: 50px;
+        background-color: $btn-register;
+        transform: rotate(0deg) translateY(0px);
+        transition: all .5s ease;
+
+        &:not(:last-child){
+            margin-bottom: 2.5px;
+        }
+
+        &:nth-child(2){
+            width: 0px;
+            height: 0px;
+            opacity: 0;
+            transition: all .5s ease;
+        }
+
+        &:nth-child(3){
+            width: 20px;
+            transition: all .5s ease;
+            transform: rotate(0deg) translateY(0px);
+        }
+    }
+}
+
+// Close Media Navbar Toggle Block \\
+
+// Open Media Navbar Toggle Block \\
+
+@media (max-width: 992px){
+
+    .navbar__toggler{
+        display: flex;
+    }
+
+    .navbar__btn_group{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar__menu{
+        display: block;
+        position: fixed;
+        background-color: #fff;
+        padding: 15px 20px;
+        height: 100%;
+        top: 74px;
+        left: -100%;
+        z-index: 1;
+        transition: all .5s ease;
+
+        .navbar-nav{
+            flex-direction: column !important;
+            border-left: 2px solid $btn-downl-hover;
+
+            .navbar_item{
+                width: 100%;
+                margin: 0;
+                padding-left: 10px;
+                
+
+                &:not(:last-child){
+                    border-bottom: 2px solid $btn-downl-hover;
+                }
+
+                &:hover{
+                    .nav-link{
+                        color: $btn-register;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    // Open Style For Toggle Menu \\
+
+    .active__toggler_menu{
+
+        .navbar__toggler_icon:nth-child(1){
+            width: 15px;
+            transform: rotate(-45deg) translateY(3px);
+        }
+
+        .navbar__toggler_icon:nth-child(2){
+            width: 20px;
+            height: 4px;
+            opacity: 1;
+            transform: translateX(7px);
+        }
+
+        .navbar__toggler_icon:nth-child(3){
+            width: 15px;
+            transform: rotate(45deg) translateY(-3px);
+        }
+
+        .navbar__menu{
+            box-shadow: 1px 5px 10px rgba(0,0,0,0.5);
+            top: 73px;
+            left: 0;
+            overflow: auto;
+
+            &::after{
+                content: '';
+                display: block;
+                flex-shrink: 0;
+                height: 100px;
+            }
+
+        }
+    }
+
+    // Close Style For Toggle Menu \\
+}
+
+// Close Media Navbar Toggle Block \\
+
+// Open Mode Button \\
+
+
+.mode{
+    display: flex;
+    justify-content: center;
+
+    .mode__control{
+        width: 36px;
+        height: 18px;
+        border-radius: 15px;
+        background-color: #000;
+        border: 1px solid $btn-register;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            background-color: #fff;
+            opacity: 0;
+            transition: all .4s ease-in-out;
+        }
+        
+        .checkbox__mode{
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .btn__lable{
+            display: block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            top: 1px;
+            left: 1px;
+            background-color: $btn-register;
+            border-radius: 50%;
+            z-index: 3;
+            box-shadow: 2px 0px 5px rgba(255, 255, 255, 0.8);
+            transition: all .5s ease;
+        }
+    }
+}
+
+.mode.anim__checkbox{
+    display: flex;
+    justify-content: center;
+
+    .mode__control{
+        width: 36px;
+        height: 18px;
+        background-color: #000;
+        border: 1px solid $btn-register;
+        border-radius: 15px;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            opacity: 1;
+        }
+        
+        .checkbox__mode{
+            opacity: 0;
+            z-index: -1;
+        }
+
+        .btn__lable{
+            display: block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            top: 1px;
+            left: 19px;
+            z-index: 3;
+            background-color: $btn-register;
+            border-radius: 50%;
+            box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.8);
+            transition: all .5s ease;
+        }
+    }
+}
+
+
+// Close Mode Button \\
+
+

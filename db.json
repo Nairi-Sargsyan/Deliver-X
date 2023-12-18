@@ -1,0 +1,53 @@
+{
+  "card": [],
+  "requestsSingUp": [
+    {
+      "fullName": "Саргся Наірі Жирайрович",
+      "email": "vvnairi.rambler@gmail.com",
+      "password": "1234",
+      "confirmpPassword": "1234",
+      "id": 1
+    },
+    {
+      "fullName": "Сингаївська Ірина Віталіївна",
+      "email": "syngaivkaairina@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "id": 2
+    },
+    {
+      "fullName": "Саргсян Наірі Жирайрович",
+      "email": "vvnairi.rambler@gmail.com",
+      "password": "123456789",
+      "confirmPassword": "123456789",
+      "id": 3
+    },
+    {
+      "fullName": "Саргсян Ануш Жирайрівна",
+      "email": "0734710273nairi@gmail.com",
+      "password": "@nush2020",
+      "confirmPassword": "@nush2020",
+      "id": 4
+    }
+  ],
+  "requestsLogIn": [
+    {
+      "login": "vvnairi.rambler@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "login": "syngaivskaairina@gmail.com",
+      "password": "1234",
+      "id": 2
+    }
+  ],
+  "requestClietnResponse": [
+    {
+      "clientTextarea": "Доброго дня, Ваш ресторан прекрасне місце для відпочинку, дякую вам та вашій команді за гарний вечір та приємну атмосфера. Продовжуте в тому ж дусі!",
+      "name": "Наірі",
+      "address": "Київ",
+      "id": 1
+    }
+  ]
+}

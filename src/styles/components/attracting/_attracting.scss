@@ -1,0 +1,41 @@
+
+
+.attracting__block{
+    width: 100%;
+    min-height: 600px;
+    background: #000;
+    margin-bottom: 140px;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -80px;
+        background: url(/image/attracting.png) no-repeat right;
+        background-size: auto 100%;
+        z-index: 3;
+    }
+
+    .attracting__content{
+        position: relative;
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        z-index: 4;
+
+        // .attracting__image{
+        //     position: relative;
+
+        //     .attracting__img{
+        //         position: absolute;
+        //         top: -350px;
+        //         left: 0px;
+        //     }
+        // }
+    }
+}

@@ -1,0 +1,27 @@
+@import '../variables/variables';
+
+.cover{
+    margin-bottom: 140px;
+}
+
+.cover__body{
+    width: 100%;
+    min-height: 800px;
+    background: url(/image/cover_02.png) no-repeat right;
+    background-size: auto 100%;
+}
+
+.cover__info, .add__image{
+    padding-top: 250px;
+}
+
+@media (max-width: 768px){
+    .cover__body{
+        background: linear-gradient(to left, transparent, black), url('/image/cover_02.png') no-repeat center;
+        background-size: 100% 100%;
+
+        h1, h3{
+            color: rgb(255, 255, 255);
+        }
+    }
+}

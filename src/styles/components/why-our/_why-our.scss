@@ -1,0 +1,67 @@
+@import '../variables/variables';
+
+.why-our__body{
+    margin-bottom: 140px;
+    min-height: 900px;
+    position: relative;
+
+    .why-our__image_01, .why-our__image_02{
+        width: 70%;
+    }
+
+    .why-our__card{
+        display: block;
+        position: absolute;
+        top: 180px;
+        left: 0;
+        transition: all .5s ease;
+    }
+}
+
+.arrow__button{
+
+    .arrow{
+        background-color: #fff;
+        border: none;
+        border-radius: 50%;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+        transition: all .3s ease;
+
+        
+        path{
+            transition: all .3s ease;
+        }
+
+        &:hover{
+            box-shadow: 1px 1px 10px rgb(255,86,52, 0.5);
+
+            path{
+                fill: $btn-register;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1400px){
+    .why-our__info{
+        h3{
+            font-size: 35px;
+        }
+    }
+
+    .why-our__image_01, .why-our__image_02{
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px){
+    .why-our__body{
+        min-height: 1100px;
+        
+        .why-our__card{
+            top: 220px;
+        }
+    }
+
+}

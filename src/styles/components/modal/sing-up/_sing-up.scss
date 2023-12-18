@@ -1,0 +1,256 @@
+
+
+.modal__sing-up{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: fixed;
+    padding: 30px 20px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow-y: auto;
+    opacity: 0;
+    transition: all .7s ease;
+
+    .modal__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: .7;
+        z-index: 98;
+    }
+
+
+    .sing-up__modal-body{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 500px;
+        height: 810px;
+        border-radius: 20px;
+        border: 2px solid #FF5634;
+        background-color: #fff;
+        z-index: 100;
+        transform: perspective(800px) translate(0, -100%) rotateX(45deg);
+        transition: all .7s ease;
+    }
+
+
+    .input__sing-up{
+        display: block;
+        width: 400px;
+        height: 50px;
+        border-radius: 10px;
+        border: 2px solid #EDEDED;
+        background: #FFF;
+        transition: all .3s ease;
+
+        &:focus{
+            border: 2px solid #FF5634;
+            outline: none;
+            background-color: #fff;
+        }
+    }
+
+    .lable__text{
+        color: #121212;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30.006px;
+    }
+
+    .input__password, .input__full-name, .input__email{
+        position: relative;
+
+        .input__success{
+            position: absolute;
+            top: 50px;
+            right: -80px;
+            opacity: 0;
+            transition: all .3s ease;
+
+            svg{
+                fill: #00FF0A;
+            }
+        }
+
+        .input__warning{
+            position: absolute;
+            top: 50px;
+            right: -80px;
+            opacity: 0;
+            transition: all .3s ease;
+
+            svg{
+                fill: #FF2B00;
+            }
+        }
+
+        &.success{
+            .input__success{
+                right: -32px;
+                opacity: 1;
+            }
+
+            input{
+                border: 2px solid #00FF0A;
+            }
+        }
+
+        &.warning{
+            .input__warning{
+                right: -32px;
+                opacity: 1;
+            }
+
+            input{
+                border: 2px solid #FF2B00;
+            }
+        }
+
+        
+
+        .input__sing-in{
+            display: block;
+            width: 400px;
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid #EDEDED;
+            background: #FFF;
+            transition: all .3s ease;
+
+            &:focus{
+                border: 2px solid #FF5634;
+                outline: none;
+                background-color: #fff;
+            }
+        }
+
+        .password__show{
+            display: block;
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            top: 50px;
+            right: 12px;
+            transition: all .3s ease;
+
+            .password__hide{
+                display: block;
+                position: absolute;
+                width: 21px;
+                height: 21px;
+                top: 3px;
+                right: 3px;
+                opacity: 0;
+                cursor: pointer;
+                z-index: 3;
+            }
+            
+            .svg-hide-bg{
+                cursor: pointer;
+                display: block;
+                position: absolute;
+                top: 0px;
+                right: 0;
+                width: 26px;
+                height: 0;
+                transition: all .3s ease;
+                overflow: hidden;
+
+                .svg-hide{
+                    display: block;
+                    position: absolute;
+                    width: 26px;
+                    height: 1.5px;
+                    border-radius: 10px;
+                    background-color: #656565;
+                    transform: rotateZ(40deg);
+                    top: 12px;
+                    right: 3px;
+                    z-index: 2;
+                }
+            }
+
+            path{
+                fill: #656565;
+            }
+
+            .password__hide:checked ~ .svg-hide-bg{
+                height: 26px;
+            }
+        }
+    }
+
+    .privacy{
+        position: relative;
+
+        .privacy__input{
+            position: absolute;
+            display: block;
+            width: 16px;
+            height: 16px;
+            opacity: 0;
+            top: 3.5px;
+            left: 0px;
+            z-index: 2;
+        }
+
+        .privacy__checkbox{
+            display: inline-block;
+            position: relative;
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            border: #FF5634 1px solid;
+            border-radius: 5px;
+
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                top: 2px;
+                left: 1.8px;
+                background: url('/icons/check__icon.png') no-repeat center;
+                background-size: 100%;
+                opacity: 0;
+                transition: all .3s ease;
+            }
+        }
+
+        .privacy__input:checked ~ .privacy__checkbox::after{
+            opacity: 1;
+        }
+    }
+}
+
+.modal__sing-up.show-two{
+    z-index: 99;
+    opacity: 1;
+
+    .sing-up__modal-body{
+        transform: perspective(800px) translate(0, 0%) rotateX(0deg);
+    }
+
+
+}    
+.modal__sing-in.show.show-two{
+    z-index: -1;
+    opacity: 0;
+    .sing-in__modal-body{
+        // opacity: 0;
+        // z-index: -1;
+        transform: perspective(800px) translate(0, 100%) rotateX(-180deg);
+    }
+}

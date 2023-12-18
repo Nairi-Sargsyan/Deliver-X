@@ -1,0 +1,45 @@
+@import './buttons/main-button';
+@import './page-mode/dark-mode';
+@import './navbar/navbar';
+@import './mode-page/mode-page';
+@import './variables/variables';
+@import './cover/cover';
+@import './text/text';
+@import './restaurant/restaurant';
+@import './delivery-system/delivery-system';
+@import './delivery-x/delivery-x';
+@import './burger/burger';
+@import './features/features';
+@import './why-our/why-our';
+@import './clients-block/clients';
+@import './attracting/attracting';
+@import './footer/footer';
+@import './modal/sing-in/sing-in';
+@import './modal/sing-up/sing-up';
+@import './modal/animation-social-icon/anim-social-icon';
+
+body{
+    font-family: 'Roboto';
+    font-style: normal;
+    transition: all .3s ease;
+
+    .header{
+        position: fixed;
+        width: 100%;
+        z-index: 50;
+        
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            z-index: 2;
+            transition: all .3s ease;
+        }
+    }
+}

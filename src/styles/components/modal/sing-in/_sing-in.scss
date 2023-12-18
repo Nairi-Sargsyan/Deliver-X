@@ -1,0 +1,212 @@
+
+
+.modal__sing-in{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: fixed;
+    padding: 30px 20px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: all .7s ease;
+
+    .modal__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        opacity: .7;
+        z-index: 98;
+    }
+
+
+    .sing-in__modal-body{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 500px;
+        height: 512px;
+        border-radius: 20px;
+        border: 2px solid #FF5634;
+        background-color: #fff;
+        z-index: 100;
+        transform: perspective(800px) translate(0, -100%) rotateX(45deg);
+        transition: all .7s ease;
+    }
+}
+
+
+
+.modal-body__social{
+    position: relative;
+
+    .text-decaration{
+        position: absolute;
+        padding: 0 10px;
+        color: #656565;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30.006px;
+        letter-spacing: 1.8px;
+        bottom: -17px;
+        left: 204px;
+    }
+}
+
+.input__password, .input__login{
+    position: relative;
+
+    .input__sing-in{
+        display: block;
+        width: 400px;
+        height: 50px;
+        border-radius: 10px;
+        border: 2px solid #EDEDED;
+        background: #FFF;
+        transition: all .3s ease;
+
+        &:focus{
+            border: 2px solid #FF5634;
+            outline: none;
+            background-color: #fff;
+        }
+    }
+
+    .password__show{
+        display: block;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: 12px;
+        right: 12px;
+        transition: all .3s ease;
+
+        .password__hide{
+            display: block;
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            top: 3px;
+            right: 3px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
+        .svg-hide-bg{
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0;
+            width: 26px;
+            height: 0;
+            transition: all .3s ease;
+            overflow: hidden;
+
+            .svg-hide{
+                display: block;
+                position: absolute;
+                width: 26px;
+                height: 1.5px;
+                border-radius: 10px;
+                background-color: #656565;
+                transform: rotateZ(40deg);
+                top: 12px;
+            }
+        }
+
+        path{
+            fill: #656565;
+        }
+
+        .password__hide:checked ~ .svg-hide-bg{
+            height: 26px;
+        }
+    }
+}
+
+.btn_group{
+    .sing-in__btn{
+        width: 175px;
+        height: 50px;
+        border-radius: 10px;
+        border: 2px solid #FF5634;
+        background: #FF5634;
+        color: #FFF;
+        text-align: center;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 18px;
+        transition: all .3s ease;
+
+        &:hover{
+            transform: translateY(-5px);
+            background-color: #ff5634c9;
+            border: 2px solid #ff563479;
+        }
+    }
+
+    .sing-up__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 175px;
+        height: 50px;
+        border-radius: 10px;
+        border: 2px solid #EDEDED;
+        background: #FFF;
+        color: #FF5634;
+        text-decoration: none;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 18px;
+        transition: all .3s ease;
+
+        &:hover{
+            transform: translateY(-5px);
+            background-color: #EDEDED;
+        }
+    }
+}
+
+.btn__exit{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #FFF;
+    border: none;
+
+    path{
+        color: #656565;
+        transition: all .3s ease;
+    }
+
+    &:hover{
+        path{
+            color: #000;
+        } 
+    }
+}
+
+.modal__sing-in.show{
+    z-index: 99;
+    opacity: 1;
+
+    .sing-in__modal-body{
+        transform: perspective(800px) translate(0, 0%) rotateX(0deg);
+    }
+}
+
+
+
