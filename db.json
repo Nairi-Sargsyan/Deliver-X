@@ -14,20 +14,6 @@
       "password": "12345678",
       "confirmPassword": "12345678",
       "id": 2
-    },
-    {
-      "fullName": "Саргсян Наірі Жирайрович",
-      "email": "vvnairi.rambler@gmail.com",
-      "password": "123456789",
-      "confirmPassword": "123456789",
-      "id": 3
-    },
-    {
-      "fullName": "Саргсян Ануш Жирайрівна",
-      "email": "0734710273nairi@gmail.com",
-      "password": "@nush2020",
-      "confirmPassword": "@nush2020",
-      "id": 4
     }
   ],
   "requestsLogIn": [
@@ -48,6 +34,24 @@
       "name": "Наірі",
       "address": "Київ",
       "id": 1
+    },
+    {
+      "clientTextarea": "sdgsd",
+      "name": "sdf",
+      "address": "sdf",
+      "id": 2
+    },
+    {
+      "clientTextarea": "sdgfsdgs",
+      "name": "dgsd",
+      "address": "g",
+      "id": 3
+    },
+    {
+      "clientTextarea": "asfasf",
+      "name": "asf",
+      "address": "asf",
+      "id": 4
     }
   ]
 }

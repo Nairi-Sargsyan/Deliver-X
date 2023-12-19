@@ -1,8 +1,19 @@
-function modal() {
+function closeModal(logIn, singUp) {
+    const modalLogIn = document.querySelector(logIn),
+        modalSingUp = document.querySelector(singUp);
+
+    modalLogIn.classList.remove('show');
+    modalLogIn.classList.remove('show-two');
+    modalSingUp.classList.remove('show-two');
+    document.body.style.overflow = '';
+}
+
+
+function modal(logIn, singUp) {
     // Open Modal \\
 
-    const modalLogIn = document.querySelector('.modal__sing-in'),
-        modalSingUp = document.querySelector('.modal__sing-up'),
+    const modalLogIn = document.querySelector(logIn),
+        modalSingUp = document.querySelector(singUp),
         btnOpenModal = document.querySelectorAll('[data-btn-register]'),
         btnCloseModal = document.querySelectorAll('[data-close-modal]'),
         btnLogIn = document.querySelector('[data-open-log-in]'),
@@ -14,13 +25,6 @@ function modal() {
         document.body.style.overflow = 'hidden';
     }
 
-    function closeModal() {
-        modalLogIn.classList.remove('show');
-        modalLogIn.classList.remove('show-two');
-        modalSingUp.classList.remove('show-two');
-        document.body.style.overflow = '';
-    }
-
     btnOpenModal.forEach(item => {
         item.addEventListener('click', () => {
             openModal();
@@ -29,7 +33,7 @@ function modal() {
 
     btnCloseModal.forEach(item => {
         item.addEventListener('click', () => {
-            closeModal();
+            closeModal(logIn, singUp);
         });
     });
 
@@ -52,4 +56,5 @@ function modal() {
     // Close Modal \\
 }
 
-module.exports = modal;
+export default modal;
+export { closeModal }

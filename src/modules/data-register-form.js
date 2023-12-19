@@ -1,4 +1,7 @@
-function dataRegisterForm() {
+import { postData } from "./servises";
+import { closeModal } from "./modal";
+
+function dataRegisterForm(logIn, singUp) {
     // Open Get Data Register Form  \\
 
     const formSingUp = document.querySelector('.sing-up__modal-body'),
@@ -14,18 +17,6 @@ function dataRegisterForm() {
         blockPasswordMark = document.querySelector('#block__password'),
         blockConfirmMark = document.querySelector('#block__confirm-password'),
         btnPassswordHide = document.querySelectorAll('.password__hide');
-
-    const postData = async (url, data) => {
-        const res = await fetch(url, {
-            method: "POST",
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: data
-        });
-
-        return await res.json();
-    }
 
     function postLogInData(form) {
         form.addEventListener('submit', (e) => {
@@ -56,7 +47,6 @@ function dataRegisterForm() {
             parentBlock.classList.remove('warning');
             parentBlock.classList.add('success');
         }
-        console.log(!emptyInput);
         return !emptyInput;
     }
 
@@ -90,7 +80,6 @@ function dataRegisterForm() {
             blockConfirmMark.classList.remove('success');
             blockConfirmMark.classList.add('warning');
         }
-        console.log(samePasswords && passwordMinLength);
         return samePasswords && passwordMinLength;
     }
 
@@ -104,7 +93,6 @@ function dataRegisterForm() {
             parentBlock.classList.remove('success');
             parentBlock.classList.add('warning');
         }
-        console.log(text);
         return text;
     }
 
@@ -163,7 +151,7 @@ function dataRegisterForm() {
                         removeSucceseClass(blockEmailMark);
                         removeSucceseClass(blockPasswordMark);
                         removeSucceseClass(blockConfirmMark);
-                        closeModal();
+                        closeModal(logIn, singUp);
                     });
             } else {
                 console.log('Не виконані умови для відправлення форми.');
@@ -177,4 +165,4 @@ function dataRegisterForm() {
     // Close Get Data Register Form  \\
 }
 
-module.exports = dataRegisterForm;
+export default dataRegisterForm;

@@ -34,8 +34,8 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        width: 500px;
-        height: 810px;
+        max-width: 100%;
+        min-height: 810px;
         border-radius: 20px;
         border: 2px solid #FF5634;
         background-color: #fff;
@@ -47,7 +47,7 @@
 
     .input__sing-up{
         display: block;
-        width: 400px;
+        width: 100%;
         height: 50px;
         border-radius: 10px;
         border: 2px solid #EDEDED;

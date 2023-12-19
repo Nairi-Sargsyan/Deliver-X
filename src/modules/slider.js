@@ -42,4 +42,4 @@ function slider() {
     // Close Slider Retaurant \\
 }
 
-module.exports = slider;
+export default slider;

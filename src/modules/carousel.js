@@ -121,4 +121,4 @@ function carousel() {
     // Close Swipe Carousel \\
 }
 
-module.exports = carousel;
+export default carousel;

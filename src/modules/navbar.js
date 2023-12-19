@@ -43,4 +43,4 @@ function navBar() {
     // Close Navbar Toggle \\
 }
 
-module.exports = navBar;
+export default navBar;

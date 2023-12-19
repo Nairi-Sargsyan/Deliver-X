@@ -1,3 +1,6 @@
+import { postData } from "./servises";
+import carousel from "./carousel";
+
 function dataClientResponseForm() {
     // Open Get Data Client Response Form  \\
 
@@ -88,13 +91,13 @@ function dataClientResponseForm() {
                     .then(data => {
                         console.log(data);
                         createClientCard(responseClient, clientNameInput, clientAddressInput);
-                        createCarousel();
                     })
                     .catch(() => {
                         console.log('Щось пішло не так!');
                     })
                     .finally(() => {
                         form.reset();
+                        carousel();
                     });
             } else {
                 warningtext.innerHTML = 'The field must be filled';
@@ -107,4 +110,4 @@ function dataClientResponseForm() {
     // Close Get Data Client Response Form  \\
 }
 
-module.exports = dataClientResponseForm;
+export default dataClientResponseForm;

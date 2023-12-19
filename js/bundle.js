@@ -1,12 +1,17 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/modules/carousel.js":
 /*!*********************************!*\
   !*** ./src/modules/carousel.js ***!
   \*********************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function carousel() {
     // Open Carousel Clients \\
 
@@ -130,7 +135,7 @@ function carousel() {
     // Close Swipe Carousel \\
 }
 
-module.exports = carousel;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (carousel);
 
 /***/ }),
 
@@ -138,7 +143,16 @@ module.exports = carousel;
 /*!**************************************************!*\
   !*** ./src/modules/data-client-response-form.js ***!
   \**************************************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _servises__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./servises */ "./src/modules/servises.js");
+/* harmony import */ var _carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./carousel */ "./src/modules/carousel.js");
+
+
 
 function dataClientResponseForm() {
     // Open Get Data Client Response Form  \\
@@ -226,17 +240,17 @@ function dataClientResponseForm() {
                 const singUpData = new FormData(form);
                 const jsonSingUp = JSON.stringify(Object.fromEntries(singUpData.entries()));
 
-                postData('http://localhost:3000/requestClietnResponse', jsonSingUp)
+                (0,_servises__WEBPACK_IMPORTED_MODULE_0__.postData)('http://localhost:3000/requestClietnResponse', jsonSingUp)
                     .then(data => {
                         console.log(data);
                         createClientCard(responseClient, clientNameInput, clientAddressInput);
-                        createCarousel();
                     })
                     .catch(() => {
                         console.log('Щось пішло не так!');
                     })
                     .finally(() => {
                         form.reset();
+                        (0,_carousel__WEBPACK_IMPORTED_MODULE_1__["default"])();
                     });
             } else {
                 warningtext.innerHTML = 'The field must be filled';
@@ -249,7 +263,7 @@ function dataClientResponseForm() {
     // Close Get Data Client Response Form  \\
 }
 
-module.exports = dataClientResponseForm;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dataClientResponseForm);
 
 /***/ }),
 
@@ -257,9 +271,18 @@ module.exports = dataClientResponseForm;
 /*!*******************************************!*\
   !*** ./src/modules/data-register-form.js ***!
   \*******************************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-function dataRegisterForm() {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _servises__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./servises */ "./src/modules/servises.js");
+/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal */ "./src/modules/modal.js");
+
+
+
+function dataRegisterForm(logIn, singUp) {
     // Open Get Data Register Form  \\
 
     const formSingUp = document.querySelector('.sing-up__modal-body'),
@@ -276,25 +299,13 @@ function dataRegisterForm() {
         blockConfirmMark = document.querySelector('#block__confirm-password'),
         btnPassswordHide = document.querySelectorAll('.password__hide');
 
-    const postData = async (url, data) => {
-        const res = await fetch(url, {
-            method: "POST",
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: data
-        });
-
-        return await res.json();
-    }
-
     function postLogInData(form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const logInData = new FormData(form);
             const jsonLogIn = JSON.stringify(Object.fromEntries(logInData.entries()));
 
-            postData('http://localhost:3000/requestsLogIn', jsonLogIn)
+            (0,_servises__WEBPACK_IMPORTED_MODULE_0__.postData)('http://localhost:3000/requestsLogIn', jsonLogIn)
                 .then(data => {
                     console.log(data);
                 })
@@ -317,7 +328,6 @@ function dataRegisterForm() {
             parentBlock.classList.remove('warning');
             parentBlock.classList.add('success');
         }
-        console.log(!emptyInput);
         return !emptyInput;
     }
 
@@ -351,7 +361,6 @@ function dataRegisterForm() {
             blockConfirmMark.classList.remove('success');
             blockConfirmMark.classList.add('warning');
         }
-        console.log(samePasswords && passwordMinLength);
         return samePasswords && passwordMinLength;
     }
 
@@ -365,7 +374,6 @@ function dataRegisterForm() {
             parentBlock.classList.remove('success');
             parentBlock.classList.add('warning');
         }
-        console.log(text);
         return text;
     }
 
@@ -411,7 +419,7 @@ function dataRegisterForm() {
                 const singUpData = new FormData(form);
                 const jsonSingUp = JSON.stringify(Object.fromEntries(singUpData.entries()));
 
-                postData('http://localhost:3000/requestsSingUp', jsonSingUp)
+                (0,_servises__WEBPACK_IMPORTED_MODULE_0__.postData)('http://localhost:3000/requestsSingUp', jsonSingUp)
                     .then(data => {
                         console.log(data);
                     })
@@ -424,7 +432,7 @@ function dataRegisterForm() {
                         removeSucceseClass(blockEmailMark);
                         removeSucceseClass(blockPasswordMark);
                         removeSucceseClass(blockConfirmMark);
-                        closeModal();
+                        (0,_modal__WEBPACK_IMPORTED_MODULE_1__.closeModal)(logIn, singUp);
                     });
             } else {
                 console.log('Не виконані умови для відправлення форми.');
@@ -438,7 +446,7 @@ function dataRegisterForm() {
     // Close Get Data Register Form  \\
 }
 
-module.exports = dataRegisterForm;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (dataRegisterForm);
 
 /***/ }),
 
@@ -446,13 +454,29 @@ module.exports = dataRegisterForm;
 /*!******************************!*\
   !*** ./src/modules/modal.js ***!
   \******************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-function modal() {
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   closeModal: () => (/* binding */ closeModal),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function closeModal(logIn, singUp) {
+    const modalLogIn = document.querySelector(logIn),
+        modalSingUp = document.querySelector(singUp);
+
+    modalLogIn.classList.remove('show');
+    modalLogIn.classList.remove('show-two');
+    modalSingUp.classList.remove('show-two');
+    document.body.style.overflow = '';
+}
+
+
+function modal(logIn, singUp) {
     // Open Modal \\
 
-    const modalLogIn = document.querySelector('.modal__sing-in'),
-        modalSingUp = document.querySelector('.modal__sing-up'),
+    const modalLogIn = document.querySelector(logIn),
+        modalSingUp = document.querySelector(singUp),
         btnOpenModal = document.querySelectorAll('[data-btn-register]'),
         btnCloseModal = document.querySelectorAll('[data-close-modal]'),
         btnLogIn = document.querySelector('[data-open-log-in]'),
@@ -464,13 +488,6 @@ function modal() {
         document.body.style.overflow = 'hidden';
     }
 
-    function closeModal() {
-        modalLogIn.classList.remove('show');
-        modalLogIn.classList.remove('show-two');
-        modalSingUp.classList.remove('show-two');
-        document.body.style.overflow = '';
-    }
-
     btnOpenModal.forEach(item => {
         item.addEventListener('click', () => {
             openModal();
@@ -479,7 +496,7 @@ function modal() {
 
     btnCloseModal.forEach(item => {
         item.addEventListener('click', () => {
-            closeModal();
+            closeModal(logIn, singUp);
         });
     });
 
@@ -502,7 +519,8 @@ function modal() {
     // Close Modal \\
 }
 
-module.exports = modal;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);
+
 
 /***/ }),
 
@@ -510,8 +528,12 @@ module.exports = modal;
 /*!*******************************!*\
   !*** ./src/modules/navbar.js ***!
   \*******************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 
 function navBar() {
     // Open Navbar Toggle \\
@@ -557,7 +579,33 @@ function navBar() {
     // Close Navbar Toggle \\
 }
 
-module.exports = navBar;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (navBar);
+
+/***/ }),
+
+/***/ "./src/modules/servises.js":
+/*!*********************************!*\
+  !*** ./src/modules/servises.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   postData: () => (/* binding */ postData)
+/* harmony export */ });
+const postData = async (url, data) => {
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+            'Content-type': 'application/json',
+        },
+        body: data
+    });
+
+    return await res.json();
+}
+
+
 
 /***/ }),
 
@@ -565,8 +613,12 @@ module.exports = navBar;
 /*!*******************************!*\
   !*** ./src/modules/slider.js ***!
   \*******************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 function slider() {
     // Open Slider Retaurant \\
 
@@ -611,7 +663,7 @@ function slider() {
     // Close Slider Retaurant \\
 }
 
-module.exports = slider;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);
 
 /***/ })
 
@@ -642,29 +694,66 @@ module.exports = slider;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ "./src/modules/slider.js");
+/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js");
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal */ "./src/modules/modal.js");
+/* harmony import */ var _modules_data_register_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/data-register-form */ "./src/modules/data-register-form.js");
+/* harmony import */ var _modules_data_client_response_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/data-client-response-form */ "./src/modules/data-client-response-form.js");
+/* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/carousel */ "./src/modules/carousel.js");
+
+
+
+
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const slider = __webpack_require__(/*! ./modules/slider */ "./src/modules/slider.js"),
-        navBar = __webpack_require__(/*! ./modules/navbar */ "./src/modules/navbar.js"),
-        modal = __webpack_require__(/*! ./modules/modal */ "./src/modules/modal.js"),
-        dataRegisterForm = __webpack_require__(/*! ./modules/data-register-form */ "./src/modules/data-register-form.js"),
-        dataCleintResponseForm = __webpack_require__(/*! ./modules/data-client-response-form */ "./src/modules/data-client-response-form.js"),
-        carousel = __webpack_require__(/*! ./modules/carousel */ "./src/modules/carousel.js");
 
-    slider();
-    navBar();
-    modal();
-    dataRegisterForm();
-    dataCleintResponseForm();
-    carousel();
+
+    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
+    (0,_modules_navbar__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__["default"])('.modal__sing-in', '.modal__sing-up');
+    (0,_modules_data_register_form__WEBPACK_IMPORTED_MODULE_3__["default"])('.modal__sing-in', '.modal__sing-up');
+    (0,_modules_data_client_response_form__WEBPACK_IMPORTED_MODULE_4__["default"])();
+    (0,_modules_carousel__WEBPACK_IMPORTED_MODULE_5__["default"])();
 })
 
 
