@@ -14,6 +14,13 @@
       "password": "12345678",
       "confirmPassword": "12345678",
       "id": 2
+    },
+    {
+      "fullName": "Саргся Наірі Жирайрович",
+      "email": "vvnairi.rambler@gmail.com",
+      "password": "123456789",
+      "confirmPassword": "123456789",
+      "id": 3
     }
   ],
   "requestsLogIn": [
@@ -34,24 +41,6 @@
       "name": "Наірі",
       "address": "Київ",
       "id": 1
-    },
-    {
-      "clientTextarea": "sdgsd",
-      "name": "sdf",
-      "address": "sdf",
-      "id": 2
-    },
-    {
-      "clientTextarea": "sdgfsdgs",
-      "name": "dgsd",
-      "address": "g",
-      "id": 3
-    },
-    {
-      "clientTextarea": "asfasf",
-      "name": "asf",
-      "address": "asf",
-      "id": 4
     }
   ]
 }
